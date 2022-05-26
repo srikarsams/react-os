@@ -1,53 +1,45 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb",
-    "prettier"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jest": true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": [
-      "tsconfig.json"
-    ]
-  },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "simple-import-sort"
-  ],
-  "rules": {
-    "max-lines": [
-      "error",
-      80
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier",
+        "plugin:jest/recommended"
     ],
-    "react/jsx-props-no-spreading": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".tsx"
-        ]
-      }
-    ],
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {
-        "project": "."
-      }
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
+    },
+    "plugins": ["react", "@typescript-eslint", "simple-import-sort", "jest"],
+    "rules": {
+        "max-lines": ["error", 80],
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [".tsx"]
+            }
+        ],
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "import/extensions": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "project": "."
+            }
+        }
     }
-  }
 }
