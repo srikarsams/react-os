@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>React OS</title>
+        <meta
+          name="description"
+          content="Desktop OS in browser using ReactJS"
+        />
       </Head>
       <Component {...pageProps} />
     </>
