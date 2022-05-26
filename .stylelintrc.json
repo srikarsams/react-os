@@ -2,9 +2,11 @@
   "extends": [
     "stylelint-config-standard-scss",
     "stylelint-config-prettier",
-    "stylelint-config-sass-guidelines"
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-styled-components"
   ],
   "rules": {
     "indentation": null
-  }
+  },
+  "processors": ["stylelint-processor-styled-components"]
 }
